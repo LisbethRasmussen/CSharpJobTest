@@ -3,7 +3,11 @@
 # Brain+ Unity Developer Job Test
 Thank you for showing an interest in taking our Unity Developer job test!
 
-This repository was created using `Unity 2018.4.5f1`, but it might work for newer versions of Unity as well.
+This repository was created using `Unity 2018.4.5f1`, but it should work for newer versions of `Unity 2018` as well.
+
+There seems so be a change in the serialization system for some of the built-in components in Unity between 2018 and 2019, so we recommend that you download the exact version or at least `Unity 2018 LTS` for taking the job test, if your local installation is newer than 2018.
+
+## How to take the job test
 
 When you open up the project in Unity, a Welcome window should appear with further instructions.
 
@@ -26,5 +30,7 @@ Look for further instructions in the scripts with the same names as the scenes (
 We recommend that you use Git so that you can track your own changes compared to the original code of the assignments.
 
 When we review your code we will be using Git, so it would be perfect if your code can be shared via a public Git repository on GitHub, BitBucket or similar.
+
+**Important: Please don't fork the job test repository, as we do not want other potential applicants to see your submission in the list of forked repositories :)** You can instead clone the job test repository locally, then create a new repository on your favourite git hosting service, and upload the local clone there.
 
 Good luck! :)
