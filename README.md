@@ -9,6 +9,16 @@ There seems so be a change in the serialization system for some of the built-in 
 
 ## How to take the job test
 
+When we review your code we will be using Git, so it would be perfect if your code can be shared via a **private** Git repository on GitHub, BitBucket or similar.
+
+**Important: Please don't fork the job test repository (the fork will be public), as we do not want other potential applicants to see your submission in the list of forked repositories :)**
+
+You should clone the job test repository locally, then create a new repository on your favourite git hosting service, and upload the local clone there. Please make sure that your repository is not marked as public, as we also don't want it to be found by search engines.
+
+When your submission is complete, go ahead and [write an email](mailto:kasper@brain-plus.com?cc=nils@brain-plus.com&subject=Unity%20Developer%20Job%20Test) to kasper@brain-plus.com, with CC nils@brain-plus.com and the subject "Unity Developer Job Test". After sending us the email, go ahead and invite our accounts (if using GitHub) as collaborators for your repository: **kaygeecee** (Kasper @ GitHub) and **LOOLinc** (Nils @ GitHub). If you chose to use another git hosting service, we'll need to coordinate the sharing in the email.
+
+## Getting started
+
 When you open up the project in Unity, a Welcome window should appear with further instructions.
 
 ![](.github/Welcome.png)
@@ -26,11 +36,5 @@ It's ok if you can't fully finish all assignments, just get as close to the solu
 There's no time limit so you can take all the time you need to finish the assignments.
 
 Look for further instructions in the scripts with the same names as the scenes (instructions are shown in the inspector and written in the code)
-
-We recommend that you use Git so that you can track your own changes compared to the original code of the assignments.
-
-When we review your code we will be using Git, so it would be perfect if your code can be shared via a public Git repository on GitHub, BitBucket or similar.
-
-**Important: Please don't fork the job test repository, as we do not want other potential applicants to see your submission in the list of forked repositories :)** You can instead clone the job test repository locally, then create a new repository on your favourite git hosting service, and upload the local clone there.
 
 Good luck! :)
