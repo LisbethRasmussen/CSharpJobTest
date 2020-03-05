@@ -4,8 +4,14 @@ namespace com.brainplus.jobtest.serialization.scenario1
 {
     public class Health : MonoBehaviour
     {
-        public int maxHealth = 100; // TODO: Make readonly for other classes, while still serialized (tweakable in the inspector)
-        public int currentHealth = 0; // TODO: Make readonly for other classes
+        //Changed--------------
+        [SerializeField]
+        private int maxHealth = 100; // TODO: Make readonly for other classes, while still serialized (tweakable in the inspector)
+        public int getMaxHealth() { //There should be a smarter way for this, but I don't know it yet
+            return maxHealth;
+        }
+        public int currentHealth { get; private set; } = 0; // TODO: Make readonly for other classes
+        //Changed--------------
 
         /// <summary>
         /// You are not allowed to change this function.

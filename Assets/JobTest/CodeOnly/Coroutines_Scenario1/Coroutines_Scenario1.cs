@@ -11,10 +11,27 @@ namespace com.brainplus.jobtest.coroutines.scenario1
     {
         public override string Instructions => "Using a coroutine, call Finish after 3 seconds using WaitForSeconds. You are not allowed to use the Time or DateTime classes.";
 
+        //New----------------
+        //Reason for creating a catch: using 'new' during runtime is not good for optimization.
+        private WaitForSeconds waitTime = new WaitForSeconds(3.0f);
+        //New----------------
+
         void Start()
         {
-            Finish(); // TODO: Call after 3 second delay
+            //Finish(); // TODO: Call after 3 second delay
+
+            //New----------------
+            StartCoroutine(WaitBeforeFinish()); ;
+            //New----------------
+
         }
+
+        //New----------------
+        IEnumerator WaitBeforeFinish() {
+            yield return waitTime;
+            Finish();
+        }
+        //New----------------
 
         /// <summary>
         /// You are not allowed to change this function.

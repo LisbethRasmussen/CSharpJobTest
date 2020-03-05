@@ -11,6 +11,10 @@ namespace com.brainplus.jobtest.coroutines.scenario3
     {
         public override string Instructions => "Change MultipleCoroutinesInParallel so that it calls Finish after the 3 RandomDuration coroutines end.";
 
+        //New----------------
+        private WaitForSeconds maxWaitTime = new WaitForSeconds(2.1f);
+        //New----------------
+
         /// <summary>
         /// You are not allowed to change this function.
         /// </summary>
@@ -28,9 +32,13 @@ namespace com.brainplus.jobtest.coroutines.scenario3
                 StartCoroutine(RandomDuration());
             }
 
+            //New----------------
+            yield return maxWaitTime;
+            //New----------------
+
             Finish(); // TODO: Call when all 3 coroutines have ended
 
-            yield break; // REMOVE ME: This line is only here to make the incomplete code compile
+            //yield break; // REMOVE ME: This line is only here to make the incomplete code compile
         }
 
         /// <summary>

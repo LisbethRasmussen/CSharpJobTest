@@ -10,7 +10,7 @@ namespace com.brainplus.jobtest.monobehaviour.scenario1
         /// </summary>
         public Inventory Inventory { get; private set; }
 
-        void Start()
+        void Awake() //<-- changed that to awake. Also, for next time, please, camelsBack.
         {
             CacheComponentReferences();
         }

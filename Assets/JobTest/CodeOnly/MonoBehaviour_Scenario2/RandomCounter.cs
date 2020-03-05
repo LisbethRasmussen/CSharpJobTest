@@ -19,10 +19,12 @@ namespace com.brainplus
             waitDuration = Random.Range(1f, 10f);
         }
 
-        void Update()
+        //"New"----------------
+        /*void Update()
         {
             TickCounter();
-        }
+        }*/
+        //"New"----------------
 
         /// <summary>
         /// You are not allowed to change this function.

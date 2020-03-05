@@ -59,7 +59,13 @@ namespace com.brainplus.jobtest.vector.scenario1
             for (int i = 0; i < countTotal; i++)
             {
                 // Check if close to center
-                if (Vector3.Distance(center, positions[i]) <= distanceThreshold) // TODO: Optimize distance check
+                /*if (Vector3.Distance(center, positions[i]) <= distanceThreshold) // TODO: Optimize distance check
+                {
+                    countClose++;
+                }*/
+
+                //It is a bit superfloues to subtract with the 0,0,0 vector, but just adding it in there for good measurement, cause what if it was not 0,0,0.
+                if (positions[i].sqrMagnitude - center.sqrMagnitude <= distanceThreshold) // TODO: Optimize distance check
                 {
                     countClose++;
                 }

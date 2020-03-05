@@ -11,6 +11,10 @@ namespace com.brainplus.jobtest.coroutines.scenario2
     {
         public override string Instructions => "Change MultipleCoroutinesInSequence so that it starts the 3 RandomDuration coroutines sequentially (only 1 of the 3 runs at any point in time).";
 
+        //New----------------
+        private WaitForSeconds maxWaitTime = new WaitForSeconds(2.1f);
+        //New----------------
+
         /// <summary>
         /// You are not allowed to change this function.
         /// </summary>
@@ -26,9 +30,17 @@ namespace com.brainplus.jobtest.coroutines.scenario2
             for (int i = 0; i < 3; i++)
             {
                 StartCoroutine(RandomDuration()); // TODO: Dont start next coroutine until this one ends
+
+                //New----------------
+                yield return maxWaitTime;
+
+                //Honestly, it would be more efficient to create a boolean that would be checked here in a while loop, and changed down in the other function,
+                //in order to make the functions run as close to each other as possible, but since you did not allow me to change the below function, this is what I did.
+
+                //New----------------
             }
 
-            yield break; // REMOVE ME: This line is only here to make the incomplete code compile
+            //yield break; // REMOVE ME: This line is only here to make the incomplete code compile
         }
 
         /// <summary>
